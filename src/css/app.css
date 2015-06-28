@@ -1,0 +1,353 @@
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size:14px;
+  height:100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Toolbar area */
+
+#headBar {
+    background-color: #193732;
+    text-align: center;
+}
+
+#headBar h2 {
+    color:white;
+    font-family: "Comic Sans MS", cursive, sans-seri;
+}
+
+
+
+
+
+.menu {
+  background-color: transparent;
+  border: none;
+  height: 38px;
+  margin: 16px;
+  width: 36px;
+}
+
+md-toolbar h1 {
+  margin: auto;
+}
+
+/* Sidenav area */
+
+md-list .md-button {
+  color: inherit;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+}
+  md-list .md-button.selected {
+    color: #03a9f4;
+  }
+
+  md-sidenav  md-list {
+    padding: 0px 0px 8px 0px;
+  }
+
+
+/* Primary content area */
+
+
+
+#content  {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+    overflow: scroll;
+}
+
+#content .md-button.next {
+  background-color: transparent;
+  border: none;
+  width: 48px;
+  height: 48px;
+  margin: 8px auto 16px 0;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+}
+
+#content .md-button.last {
+    background-color: transparent;
+    border: none;
+    width: 48px;
+    height: 48px;
+    margin: 8px auto 16px 0;
+    position: absolute;
+    top: 10px;
+    right: 75px;
+}
+
+#content md-icon.avatar {
+  margin-top: 10px;
+}
+
+#content .md-button.share > md-icon {
+  fill:black;
+  width:36px;
+  height:36px;
+}
+
+md-button.menuBtn > md-icon {
+  fill:white;
+  width:24px;
+  height:24px;
+}
+
+#content .md-button.share:active > md-icon {
+  background-color: #dadada;
+  border-radius: 75%;
+  padding:4px;
+  transition: all 100ms ease-out 30ms;
+}
+
+#content img {
+  display: block;
+  height: auto;
+  max-width: 500px;
+}
+
+/* Utils */
+
+.content-wrapper {
+  position: relative;
+}
+
+/* Typography support coming in 0.8.0 */
+
+md-toolbar h1 {
+  font-size: 1.250em;
+  font-weight: 400;
+}
+
+.avatar {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0px;
+  vertical-align: middle;
+  zoom:0.70;
+  transform: translateZ(0);
+  -webkit-transform: scale(0.70);
+  -moz-transform:scale(0.70);
+}
+
+
+md-bottom-sheet  md-icon {
+  margin-right:20px;
+}
+
+span.name {
+  font-weight: bold;
+  font-size:1.1em;
+  padding-left:5px;
+}
+
+/*-------------------------
+	The Introduction Box
+--------------------------*/
+
+
+
+
+/*-------------------------
+	The Grid Box
+--------------------------*/
+
+.bar{
+    background-color:white;
+
+    background-image:-webkit-linear-gradient(top, white, white);
+    background-image:-moz-linear-gradient(top, white, #5392ad);
+    background-image:linear-gradient(top, white, #5392ad);
+
+    box-shadow: 0 1px 1px #ccc;
+    border-radius: 2px;
+    width:100%;
+    padding: 10px;
+    margin: 45px auto 25px;
+    position:relative;
+    text-align:right;
+    line-height: 1;
+}
+
+.bar span {
+    float: left;
+    font-size: 24px;
+    font-family: "Comic Sans MS", cursive, sans-seri;
+    margin-left:65px;
+    color:black;
+    text-shadow: 2px 2px lightgrey;
+}
+
+.bar a{
+     background:#4987a1 center center no-repeat;
+     width:32px;
+     height:32px;
+     display:inline-block;
+     text-decoration:none !important;
+     margin-right:5px;
+     border-radius:2px;
+     cursor:pointer;
+ }
+
+.bar a:hover{
+    opacity: 0.7;
+}
+
+.bar a.list-icon{
+    background-color:lightblue;
+}
+
+.bar a.grid-icon{
+    background-color: lightblue;
+}
+
+.bar a.refresh-icon {
+    background-image: url('http://www.pixelstech.net/article/images/ic_action_refresh2.png');
+    background-color: white;
+}
+
+.bar a.active{
+    background-color:palevioletred;
+    width:38px;
+    height:38px;
+}
+
+
+/*-------------------------
+	List layout
+--------------------------*/
+ul.list{
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+}
+
+ul.list li{
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    overflow: hidden;
+}
+
+ul.list li img{
+    width:120px;
+    height:120px;
+    float:left;
+    border:none;
+}
+
+ul.list li p{
+    margin-left: 135px;
+    font-weight: bold;
+    color:#6e7a7f;
+}
+
+/*-------------------------
+	Grid layout
+--------------------------*/
+
+ul.grid{
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+ul.grid li{
+    padding: 2px;
+    float:left;
+}
+
+ul.grid li img{
+    width:255px;
+    height:255px;
+    display:block;
+    border:none;
+    margin:5px;
+}
+
+ul.grid li img:hover{
+    opacity: 0.5;
+}
+
+
+
+.md-whiteframe {
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
+    font-size: 16px;
+}
+
+
+
+
+
+
+/*---------------------------------------------*/
+@media (max-width: 600px) {
+    #headBar h2 {
+        font-size: 20px;
+    }
+    .fb {
+        font-size: 20px;
+    }
+
+    .bar {
+        width: 100%;
+        margin-left: 0;
+        margin-right:0;
+    }
+    .bar span{
+        font-size: 13.5px;
+        margin-left: 2px;
+    }
+    .bar a{
+        width:16px;
+        height:16px;
+    }
+
+    ul.list li img{
+        width: 80px;
+        height:80px;
+    }
+
+    ul.grid li img{
+        width:200px;
+        height:200px;
+        padding-left: 25px;
+    }
+
+    ul.list li p{
+        margin-left: 90px;
+    }
+
+    ul{
+        padding-left: 0;
+    }
+
+
+}
+
+
+/* when hiding the picture */
+.left-side-bar.ng-hide-add         { animation:1s fadeOutLeft ease; }
+
+/* when showing the picture */
+.left-side-bar.ng-hide-remove      { animation:1s fadeInLeft ease; }
+
+
+
+

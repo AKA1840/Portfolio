@@ -1,0 +1,8 @@
+ img.carImg{
+     width:145px;
+     height:100px;
+ }
+
+ img.carImg:hover{
+     opacity: 0.75;
+ }

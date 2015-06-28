@@ -1,0 +1,42 @@
+<md-button class="last" md-no-ink ui-sref="FB" aria-label="Last">
+    <md-icon md-svg-icon="last"></md-icon>
+</md-button>
+
+<md-button class="next" md-no-ink ui-sref="Flip" aria-label="Next">
+    <md-icon md-svg-icon="next"></md-icon>
+</md-button>
+
+    <div class="playlist">
+        <h4>Playlist</h4>
+
+        <ul class="albums">
+            <li class="album current" ng-repeat="album in albums">
+                <button class="queue add" ng-click="player.playlist.add(album)"></button>
+                <span class="album-title">{{album.title}}</span>
+                <span class="artist-name">{{album.artist}}</span>
+            </li>
+        </ul>
+
+        <nav>
+            <button class="control play" ng-click="player.play()" ng-hide="player.playing">Play</button>
+            <button class="control pause" ng-click="player.pause()" ng-show="player.playing">Pause</button>
+            <button class="control prev" ng-click="player.previous()">Prev</button>
+            <button class="control next" ng-click="player.next()">Next</button>
+        </nav>
+
+        <h4>Added List</h4>
+        <ul class="albums">
+            <li class="album" ng-repeat="album in player.playlist"
+                ng-class="{current: player.current.album == $index}">
+                <button class="queue remove" ng-click="player.playlist.remove(album)"></button>
+                <span class="album-title">{{album.title}}</span>
+                <span class="artist-name">{{album.artist}}</span>
+                <ol class="tracks">
+                    <li ng-repeat="track in album.tracks" class="track"
+                        ng-class="{current: player.current.track == $index}"
+                        ng-click="player.play($index, $parent.$index)">{{track.title}}</li>
+                </ol>
+            </li>
+        </ul>
+
+    </div>

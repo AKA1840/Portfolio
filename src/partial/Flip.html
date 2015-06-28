@@ -1,0 +1,32 @@
+<md-button class="last" md-no-ink ui-sref="Music" aria-label="Last">
+    <md-icon md-svg-icon="last"></md-icon>
+</md-button>
+<md-button class="next" md-no-ink ui-sref="Form" aria-label="Next">
+    <md-icon md-svg-icon="next"></md-icon>
+</md-button>
+
+<br/><br/>
+<!--<div>Pairs left to match: {{game.unmatchedPairs}}</div>-->
+<!--<div>Matching: {{game.firstPick.title}}</div>-->
+
+<div style="margin:20px">
+<table>
+    <tr ng-repeat="row in game.grid">
+        <td ng-repeat="tile in row" ng-click="game.flipTile(tile)">
+            <!-- this entire block can be replaced with our custom component mgCard:
+              <mg-card tile="tile"></mg-card>
+            -->
+            <div class="flip_container">
+                <div class="card" ng-class="{flipped: tile.flipped}">
+                    <img class="front" ng-src="image/flip_img/pb.png">
+                    <img class="back" ng-src="image/flip_img/{{tile.title}}.png">
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
+
+<!--<button ng-click="refresh()">Click Me</button>-->
+<!--<div class="message">{{game.message}}</div>-->
+

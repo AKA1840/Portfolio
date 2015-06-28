@@ -1,0 +1,48 @@
+<md-button class="last" md-no-ink ui-sref="Flip" aria-label="Last">
+    <md-icon md-svg-icon="last"></md-icon>
+</md-button>
+
+<md-button class="next" md-no-ink ui-sref="Introduction" aria-label="Next">
+    <md-icon md-svg-icon="next"></md-icon>
+</md-button>
+
+<br/>
+<div class="bar" style="text-align:center">
+    <!-- These two buttons switch the layout variable,
+         which causes the correct UL to be shown. -->
+    <h4>A Table Sample</h4>
+
+</div>
+
+
+<div class="panel panel-default" style="width:600px;margin:auto">
+    <div class="panel-body">
+        <div style="margin:auto;width:400px; text-align: center">
+            <input type="text" ng-model="newName" style="border-radius: 3px" placeholder="Name/Year"/>
+            <br/><br/>
+            <button class="btn btn-primary" ng-click="loadData()">Load Data</button>
+        </div>
+
+    </div>
+</div>
+<hr/>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr><th style="width:180px">Image</th><th>Name</th><th>Year</th><th>Price</th><th>Details</th></tr>
+            </thead>
+            <tbody>
+            <tr ng-hide="products.length"><td colspan="5" class="text-center">No Data</td></tr>
+            <tr ng-repeat="item in products | filter: newName">
+                <td><img src="{{item.image}}" class="carImg"/></td>
+                <td>{{item.name}}</td>
+                <td>{{item.year }}</td>
+                <td>{{item.price | currency}}</td>
+                <td><a href="{{item.detail}}" target="_blank">Detail</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

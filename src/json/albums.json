@@ -1,0 +1,42 @@
+[{
+  "title": "Mixed Songs",
+  "artist": "All Stars",
+  "tracks": [{
+    "title": "Where did you go",
+    "url": "assets/music/wyg.mp3"
+  },
+    {
+      "title": "大城小爱",
+      "url": "http://www.tingge123.com/mp3/562.mp3"
+    },
+    {
+      "title": "小情歌",
+      "url": "http://www.tingge123.com/mp3/2193.mp3"
+    },
+    {
+      "title": "Trouble Maker",
+      "url": "http://www.tingge123.com/mp3/5749.mp3"
+    },
+    {
+      "title": "Rolling in the deep",
+      "url": "http://www.tingge123.com/mp3/3920.mp3"
+    },
+    {
+      "title": "Like you",
+      "url": "http://www.tingge123.com/mp3/4149.mp3"
+    },
+    {
+      "title": "赤道与北极",
+      "url": "http://www.tingge123.com/mp3/5702.mp3"
+    },
+    {
+      "title": "偏爱",
+      "url": "http://www.tingge123.com/mp3/5213.mp3"
+    },
+    {
+      "title": "Booty Music",
+      "url": "http://www.tingge123.com/mp3/2712.mp3"
+    }
+
+  ]
+}]

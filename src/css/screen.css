@@ -1,0 +1,139 @@
+
+
+.playlist .album.current {
+    background-color: #444455;
+    border-radius: 10px;
+}
+
+.playlist .album.current .tracks .current {
+    background-color: #995599;
+}
+
+.playlist .album .tracks li {
+    font-style: normal;
+    padding: .3em;
+}
+
+
+.albums {
+    list-style: none;
+
+}
+
+.album {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 1em 2em;
+    font-style: italic;
+}
+
+.album .artist-name {
+    font-style: normal;
+    font-weight: lighter;
+    color: #999;
+}
+
+
+.track {
+  cursor: pointer;
+}
+
+.album .tracks {
+    margin: auto;
+    padding: .5em 0 0 1.5em;
+}
+
+.album button.queue {
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+
+.album-title {
+    margin-right: 10px;
+}
+
+.playlist {
+    position: absolute;
+    width: 90%;
+    min-height: 100%;
+    color: #eee;
+    background-color: #333;
+    padding: 20px;
+    margin-left:0;
+    margin-right:0;
+    margin-top:50px;
+}
+
+nav {
+    width: 200px;
+    margin: auto;
+    padding: 5px;
+    border-style: double;
+    border-radius: 25px;
+}
+
+nav button.control {
+    text-indent: -9999px;
+    width: 55px;
+    height: 50px;
+    border: 0;
+    padding: 10px;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+
+
+.album .queue.add {
+    background-image: url('../image/png/add.png');
+}
+
+.album .queue.remove {
+    background-image: url('../image/png/remove.png');
+}
+
+nav button.play {
+    background: url('../image/png/control_play.png') center no-repeat;
+}
+
+nav button.play:hover {
+    background: url('../image/png/control_play_hover.png') center no-repeat;
+}
+
+nav button.pause {
+    background: url('../image/png/control_pause.png') center no-repeat;
+}
+
+nav button.pause:hover {
+    background: url('../image/png/control_pause_hover.png') center no-repeat;
+}
+
+nav button.prev {
+    background: url('../image/png/control_start.png') center no-repeat;
+}
+
+nav button.prev:hover {
+    background: url('../image/png/control_start_hover.png') center no-repeat;
+}
+
+nav button.next {
+    background: url('../image/png/control_end.png') center no-repeat;
+}
+
+nav button.next:hover {
+    background: url('../image/png/control_end_hover.png') center no-repeat;
+}
+
