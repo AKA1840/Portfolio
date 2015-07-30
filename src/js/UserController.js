@@ -1,8 +1,16 @@
 var users = angular.module('users');
 
-users.controller('UserController', ['$scope', function( $scope) {
-    $scope.toggle = false;
-}]);
+users.controller('UserController', function( $scope, $mdSidenav, $mdUtil) {
+
+    $scope.toggleLeft = buildToggler('left');
+    function buildToggler(navID) {
+      var debounceFn =  $mdUtil.debounce(function(){
+            $mdSidenav(navID)
+              .toggle();
+          },300);
+      return debounceFn;
+    }
+});
 
 users.controller('introductionCtrl',['$scope', function($scope){
 
