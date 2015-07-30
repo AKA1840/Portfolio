@@ -14,15 +14,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="lib/angular-material.css"/>
     
-    <link rel="stylesheet" href="css/animate.css"/>
-    <link rel="stylesheet" href="css/app.css"/>
-    <link rel="stylesheet" href="css/screen.css"/>
-    <link rel="stylesheet" href="css/flip.css"/>
-    <link rel="stylesheet" href="css/Form.css"/>
+    <link rel="stylesheet" href="styles/animate.css"/>
+    <link rel="stylesheet" href="styles/app.css"/>
+    <link rel="stylesheet" href="styles/screen.css"/>
+    <link rel="stylesheet" href="styles/flip.css"/>
+    <link rel="stylesheet" href="styles/Form.css"/>
 
 </head>
 
-<body ng-app="starterApp" layout="column" ng-controller="UserController as ul">
+<body ng-app="amApp" layout="column" ng-controller="rootCtrl">
 <div id="headBar">
     <div style="float:left; margin:16px 0 16px 20px;" ng-click="toggleLeft()" hide-gt-md>
         <span  class="glyphicon glyphicon-th-list" style="font-size:25px; color: white"></span>
@@ -32,53 +32,12 @@
 <div flex layout="row">
     <md-sidenav md-is-locked-open="$mdMedia('gt-md')" class="md-whiteframe-z2" md-component-id="left">
         <md-list>
-            <md-item>
-                <md-button ng-click="expression='Introduction'"
-                           ng-class="{'selected' : expression='Introduction' }"
-                           ui-sref="Introduction">
-                    <md-icon md-svg-icon="image/svg/Introduction.svg" class="avatar"></md-icon>
-                    Introduction
-                </md-button>
-            </md-item>
-            <md-item>
-                <md-button ng-click="expression='Grid'"
-                           ng-class="{'selected' : expression='Grid' }"
-                           ui-sref="Grid">
-                    <md-icon md-svg-icon="image/svg/Grid.svg" class="avatar"></md-icon>
-                    Grid Image
-                </md-button>
-            </md-item>
-            <md-item>
-                <md-button ng-click="expression='FB'"
-                           ng-class="{'selected' : expression='FB' }"
-                           ui-sref="FB">
-                    <md-icon md-svg-icon="image/svg/FB.svg" class="avatar"></md-icon>
-                    Facebook Login
-                </md-button>
-            </md-item>
-            <md-item>
-                <md-button ng-click="expression='Music'"
-                           ng-class="{'selected' : expression='Music' }"
-                           ui-sref="Music">
-                    <md-icon md-svg-icon="image/svg/Music.svg" class="avatar"></md-icon>
-                    Music Playlist
-                </md-button>
-            </md-item>
-            <md-item>
-                <md-button ng-click="expression='Flip'"
-                           ng-class="{'selected' : expression='Flip' }"
-                           ui-sref="Flip">
-                    <md-icon md-svg-icon="image/svg/poker.svg" class="avatar"></md-icon>
-                    Poker Face
-                </md-button>
-            </md-item>
-
-            <md-item>
-                <md-button ng-click="expression='Form'"
-                           ng-class="{'selected' : expression='Form' }"
-                           ui-sref="Form">
-                    <md-icon md-svg-icon="image/svg/Form.svg" class="avatar"></md-icon>
-                    Form
+            <md-item ng-repeat="topic in topics">
+                <md-button ng-click="expression=topic.name;close()"
+                           ng-class="{'selected' : expression = topic.name }"
+                           ui-sref={{topic.name}}>
+                    <md-icon md-svg-icon={{topic.icon}} class="avatar"></md-icon>
+                    {{topic.name}}
                 </md-button>
             </md-item>
         </md-list>
@@ -97,33 +56,25 @@
 <script src="lib/angular-ui-router.min.js"></script>
 <script src="lib/angular-facebook.js"></script>
 
-<!-- JS files -->
-<script src="js/Users.js"></script>
-<script src="js/UserController.js"></script>
-<script src="js/UserService.js"></script>
-<script src="js/game.js"></script>
+<!-- Application JS files -->
+<script src="scripts/app.js"></script>
+<!-- Controller files -->
+<script src="scripts/controllers/rootCtrl.js"></script>
+<script src="scripts/controllers/introductionCtrl.js"></script>
+<script src="scripts/controllers/gridCtrl.js"></script>
+<script src="scripts/controllers/facebookCtrl.js"></script>
+<script src="scripts/controllers/musicCtrl.js"></script>
+<script src="scripts/controllers/flipCtrl.js"></script>
+<script src="scripts/controllers/formCtrl.js"></script>
 
-
-
-<script type="text/javascript">
-    angular.module('starterApp', ['ngMaterial', 'users'])
-            .config(function($mdThemingProvider, $mdIconProvider){
-                $mdIconProvider
-                        .defaultIconSet("image/svg/avatars.svg", 128)
-                        .icon("menu"       , "image//svg/menu.svg"        , 24)
-                        .icon("share"      , "image//svg/share.svg"       , 24)
-                        .icon("next"   , "image//svg/right arrow.svg" , 24)
-                        .icon("last"   , "image//svg/left arrow.svg"  , 24)
-                        .icon("google_plus", "image//svg/google_plus.svg" , 512)
-                        .icon("hangouts"   , "image//svg/hangouts.svg"    , 512)
-                        .icon("twitter"    , "image//svg/twitter.svg"     , 512)
-                        .icon("phone"      , "image//svg/phone.svg"       , 512);
-
-                $mdThemingProvider.theme('default')
-                        .primaryPalette('brown')
-                        .accentPalette('red');
-            });
-</script>
+<!-- Service files -->
+<script src="scripts/services/instagram.js"></script>
+<script src="scripts/services/flipGame.js"></script>
+<script src="scripts/services/audio.js"></script>
+<script src="scripts/services/play.js"></script>
+<script src="scripts/services/game.js"></script>
+<!-- Directive files -->
+<script src="scripts/directives/debug.js"></script>
 
 </body>
 </html>

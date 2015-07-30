@@ -1,5 +1,5 @@
-angular.module('users', [ 'ngMaterial','ui.router', 'ngResource', 'facebook' ])
-      .config(function($stateProvider, $urlRouterProvider){
+angular.module('amApp', ['ngMaterial','ui.router', 'ngResource', 'facebook'])
+    .config(function($stateProvider, $urlRouterProvider){
           $urlRouterProvider.otherwise("/Introduction");
           $stateProvider
               .state('Introduction', {
@@ -11,8 +11,8 @@ angular.module('users', [ 'ngMaterial','ui.router', 'ngResource', 'facebook' ])
                   templateUrl: "partial/Grid.html",
                   controller: "gridCtrl"
               })
-              .state('FB', {
-                  url:'/FB',
+              .state('Facebook', {
+                  url:'/Facebook',
                   templateUrl: "partial/facebook.html",
                   controller: "facebookCtrl"
               })
@@ -31,11 +31,9 @@ angular.module('users', [ 'ngMaterial','ui.router', 'ngResource', 'facebook' ])
                   templateUrl: "partial/Form.html",
                   controller: "formCtrl"
               });
-      })
-      .config([ 'FacebookProvider', function(FacebookProvider) {
+    })
+    .config([ 'FacebookProvider', function(FacebookProvider) {
               var myAppId = '1615889988652582';
-              // FacebookProvider.setAppId('myAppId');
               FacebookProvider.init(myAppId);
           }
-      ]);
-
+    ]);
