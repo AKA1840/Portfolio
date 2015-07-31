@@ -8,12 +8,12 @@ angular.module("amApp")
   .controller("rootCtrl", function( $scope, $mdSidenav, $mdUtil) {
 
     $scope.topics = [
-      { "name": "Introduction", "icon": "image/svg/Introduction.svg" },
-      { "name": "Grid", "icon": "image/svg/Grid.svg" },
-      { "name": "Facebook", "icon": "image/svg/FB.svg" },
-      { "name": "Music", "icon": "image/svg/Music.svg" },
-      { "name": "Flip", "icon": "image/svg/Flip.svg" },
-      { "name": "Form", "icon": "image/svg/Form.svg" }
+      { "name": "Introduction", "icon": "image/svg/Introduction.svg", "state":"root.Introduction" },
+      { "name": "Grid", "icon": "image/svg/Grid.svg", "state":"root.Grid" },
+      { "name": "Facebook", "icon": "image/svg/FB.svg", "state":"root.Facebook" },
+      { "name": "Music", "icon": "image/svg/Music.svg", "state":"root.Music" },
+      { "name": "Flip", "icon": "image/svg/Flip.svg", "state":"root.Flip" },
+      { "name": "Form", "icon": "image/svg/Form.svg", "state":"root.Form" }
     ]
 
     $scope.toggleLeft = buildToggler('left');

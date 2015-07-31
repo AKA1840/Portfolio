@@ -1,0 +1,23 @@
+<div id="headBar" >
+    <div style="float:left; margin:16px 0 16px 20px;" ng-click="toggleLeft()" hide-gt-md>
+        <span  class="glyphicon glyphicon-th-list" style="font-size:25px; color: white"></span>
+    </div>
+    <h2 style="margin:0;height:60px;padding:15px;">Simple Portfolio - AKA</h2>
+</div>
+<div flex layout="row">
+    <md-sidenav md-is-locked-open="$mdMedia('gt-md')" class="md-whiteframe-z2" md-component-id="left">
+        <md-list>
+            <md-item ng-repeat="topic in topics">
+                <md-button ng-click="expression=topic.name;close()"
+                           ng-class="{'selected' : expression = topic.name }"
+                           ui-sref={{topic.state}}>
+                    <md-icon md-svg-icon={{topic.icon}} class="avatar"></md-icon>
+                    {{topic.name}}
+                </md-button>
+            </md-item>
+        </md-list>
+    </md-sidenav>
+    <div flex>
+        <md-content id="content" ui-view ></md-content>
+    </div>
+</div>
