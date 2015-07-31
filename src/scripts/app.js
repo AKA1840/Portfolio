@@ -1,4 +1,10 @@
-angular.module('amApp', ['ngMaterial','ui.router', 'ngResource', 'facebook'])
+'use strict';
+/*
+ * Name: app.js
+ * Configuration for the application
+ */
+
+angular.module('amApp', ['ngMaterial','ui.router', 'ngResource', 'facebook', 'ui.bootstrap'])
     .config(function($stateProvider, $urlRouterProvider){
           $urlRouterProvider.otherwise("/Introduction");
           $stateProvider

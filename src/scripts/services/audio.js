@@ -1,11 +1,11 @@
 'use strict';
 /*
- * Name: rootCtrl
- * Controller for the application root
+ * Name: audio
+ * Service of audio
  */
 
 angular.module("amApp")
-.factory('audio',['$document',  function($document) {
+.factory('audio',  function($document) {
     var audio = $document[0].createElement('audio');
     return audio;
-}]);
+});

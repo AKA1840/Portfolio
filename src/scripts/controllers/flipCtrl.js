@@ -5,12 +5,14 @@
  */
 
 angular.module("amApp")
-.controller("flipCtrl", ["$scope","game", function($scope, game){
-    $scope.game = game;
+.controller("flipCtrl", function($scope){
+	var tileNames = ['ace', 'king', 'queen', 'jack', 'ten', 'nine',
+        'eight', 'seven','six'];
+
+
+    $scope.game = new Game(tileNames);
 
     $scope.refresh = function(){
-       //need to refresh
+       $scope.game = new Game(tileNames);
     }
-
-
-}]);
+});

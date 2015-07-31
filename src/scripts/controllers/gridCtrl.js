@@ -1,7 +1,7 @@
 'use strict';
 /*
- * Name: rootCtrl
- * Controller for the application root
+ * Name: gridCtrl
+ * Controller for the Grid page
  */
 
 angular.module("amApp")
