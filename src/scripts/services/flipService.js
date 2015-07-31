@@ -11,7 +11,10 @@
 // });
 
 
-
+// return {
+//   tile: Tile,
+//   removeRandomTile: removeRandomTile,
+// }
 
 
 function Tile(title) {

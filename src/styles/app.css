@@ -338,7 +338,10 @@ ul.grid li img:hover{
         padding-left: 0;
     }
 
-
+    .bar a.active{
+        width:22px;
+        height:22px;
+    }
 }
 
 
